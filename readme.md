@@ -2,35 +2,50 @@
 
 
 ------------------------------
-## Tipos de variables
-GIT
-/*/*/*ayuda
+## Ayuda en git
+```git
 sarasa --help
+```
 
-----------4configuracion
+------------------------------
+## Configuración
+
+```git
 git config --global
-ex:
+```
+ejemplo:
+```
 git config --global user.name "fabian gonzalez"
 git config --global user.email "fabiansato@gmail.com"
 
 git config -l
+```
+### podemos setear por repositorio 
+ejemplo
+```git
 
-/*/*/podemos setear por repositorio 
-ex
 git config --local
-
-
-----------5 crear repositorio
+```
+------------------------------
+## crear repositorio 
+```git
 git init
+```
 
---------6 estados de git
+------------------------------
+## Estados en git
+```git
 git status 
+```git
 (muestra estados de como estan trackeados)
-
+```
+```git
 
 git add 
 (pasa al area de preparacion)
-s
+```
+
+
 nos muestra la bitacora
 
 -------- 1.7 aprendiendo a escribir commits
@@ -54,4 +69,4 @@ git add .
 /*/*/ agregar todo lo de stage a repositorio
 git commit -m "el mensaje para agregar"
 
-```
+
