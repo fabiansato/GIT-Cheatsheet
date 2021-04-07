@@ -40,7 +40,7 @@ git status
 ```
 
 (muestra estados de como estan trackeados)
-```
+
 ```git
 
 git add 
