@@ -7,8 +7,81 @@
 sarasa --help
 ```
 
+
 ------------------------------
-## Configuración
+## crear repositorio 
+```git
+git init
+```
+
+
+(muestra estados de como estan trackeados)
+
+```git
+
+git add 
+```
+(pasa al area de preparacion)
+
+------------------------------
+## Estados en git
+```git
+git status 
+```
+
+
+nos muestra la bitacora
+
+Mostrar el log de datos del git
+```git
+git log
+```
+
+------------------------------
+## escribiendo commits
+```git
+git commit
+```
+ahora presionamos "I" para insertar
+escribimos fuera del texto
+ponemos ESQ
+para salir:
+```
+:wq
+```
+y entrer para salver y se creo el escrito para el commit!
+
+
+```git
+git commit -m "el mensaje para agregar"
+```
+------------------------------
+## Agregando archivos que se van a enviar
+```git
+git add <nombrearchivo>
+```
+
+### agregar todo el archivo actual stage
+
+```git
+git add .
+```
+
+
+
+------------------------------
+## Subiendo archivos al repositorio
+```git
+git push
+```
+
+para subir todo el master:
+```git
+git push --set-upstream origin master
+```
+
+------------------------------
+## Configuración para GITHUB
 
 ```git
 git config --global
@@ -27,70 +100,31 @@ ejemplo:
 
 git config --local
 ```
-------------------------------
-## crear repositorio 
+
+### creando keygen (en linux)
 ```git
-git init
+Ssh-keygen -t rsa -b 4096 -C FRASEUNICA
 ```
-
-------------------------------
-## Estados en git
+Buscamos donde esta creada la ssh
 ```git
-git status 
+Cd ~/.ssh!
 ```
 
-(muestra estados de como estan trackeados)
-
+probamos si está todo ok la ssh:
 ```git
-
-git add 
+eval"$(ssh-agent -s)"
 ```
-(pasa al area de preparacion)
-
-
-
-nos muestra la bitacora
-
-------------------------------
-## escribiendo commits
-```git
-git commit
-```
-ahora presionamos "I" para insertar
-escribimos fuera del texto
-ponemos ESQ
-para salir:
-```
-:wq
-```
-y entrer para salver y se creo el escrito para el commit!
-
-
-------------------------------
-## Agregando archivos que se van a enviar
-```git
-git add <nombrearchivo>
-```
-
-### agregar todo el archivo actual stage
 
 ```git
-git add .
+ssh-add ~/.ssh/id_rsa
 ```
 
-### agregar todo lo de stage a repositorio
-
+instalaremos xclip (linux)
 ```git
-git commit -m "el mensaje para agregar"
+sudo apt install xclip
 ```
-------------------------------
-## Subiendo archivos al repositorio
+Edutaremos el archivo y agregaremos la SSH y GPG key antes creada:
 ```git
-git push
-```
-
-para subir todo el master:
-```git
-git push --set-upstream origin master
+xclip -selection clipboard < ~/.ssh/id_rsa.pub
 ```
 
