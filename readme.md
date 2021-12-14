@@ -80,6 +80,21 @@ para subir todo el master:
 git push --set-upstream origin master
 ```
 
+Mostrar los status realizados
+```git
+git status
+```
+
+Mostrar todos los cambios históricos hechos, incluyendo lineas de texto cambiados, cuando y quien los hizos
+```git
+git show
+```
+
+Mostrar el log de cambios de un archivo determinado
+```git
+git log NOMBREDEARCHIVO
+```
+
 ------------------------------
 ## Configuración para GITHUB
 
